@@ -1,0 +1,132 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url(fonts/PMINGLIU.ttf);
+  }
+
+html{
+    background-color: grey;
+	font-family: myFirstFont;
+	text-underline-offset: 2px;
+}
+
+body{
+    /* margin-left: 25vw;
+    margin-right: 25vw; */
+    background-color: grey;
+    height: 100dvh;
+	padding: 0 .3rem 0 .3rem;
+	margin-left: 0;
+	max-width: 700px;
+}
+
+@keyframes cycle{
+    /*   0%{color: red;} */
+    14.29%{color: #ff00ff;}
+    28.57%{color: #00ff00;}
+    42.86%{color: #ffff00;}
+    57.14%{color: #0000ff;}
+    71.43%{color: #ffffff;}
+    85.71%{color: #ff0000;}
+    100%{color: #00ffff;}
+}
+h1{
+    animation: cycle 5s linear infinite;
+    animation-timing-function: steps(1, jump-start);
+    text-shadow: black .1rem .1rem .1rem;
+	padding-bottom:0;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+
+.header-wrapper{
+	width: 100%;
+	background: grey;
+	top:0;
+	position: fixed;
+}
+
+.header{
+	display: inline-block;
+}
+
+.content{
+	padding-top: 4.5rem;
+}
+
+
+/* ----------------------- Marquee ------------------------ */
+.marquee {
+	height: 20px;
+	overflow: hidden;
+	position: relative;
+	background: #000000;
+	color: #e36414;
+	border: .2em solid black;
+	border-style: inset;
+	top: 0%;
+}
+
+@font-face {
+	font-family: myFirstFont;
+	src: url(fonts/PMINGLIU.ttf);
+  }
+
+.marquee p {
+	position: absolute;
+	font-size: 15px;
+	width: auto;
+	height: 15px;
+	white-space: nowrap;
+	margin: 0;
+	line-height: 20px;
+	text-align: center;
+	-moz-transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-moz-animation: scroll-left 2s linear infinite;
+	-webkit-animation: scroll-left 2s linear infinite;
+	animation: scroll-left-mobile 5s linear infinite;
+	font-family: myFirstFont;
+}
+
+/* Marquee Animation */
+@-moz-keyframes scroll-left {
+	0% {
+		-moz-transform: translateX(200%);
+	}
+	100% {
+		-moz-transform: translateX(-150%);
+	}
+}
+
+@-webkit-keyframes scroll-left {
+	0% {
+		-webkit-transform: translateX(200%);
+	}
+	100% {
+		-webkit-transform: translateX(-150%);
+	}
+}
+
+@keyframes scroll-left {
+	0% {
+		-moz-transform: translateX(200%);
+		-webkit-transform: translateX(200%);
+		transform: translateX(200%);
+	}
+	100% {
+		-moz-transform: translateX(-150%);
+		-webkit-transform: translateX(-150%);
+		transform: translateX(-150%);
+	}
+}
+
+@keyframes scroll-left-mobile {
+	0% {
+		transform: translateX(200%);
+	}
+	100% {
+		transform: translateX(-150%);
+	}
+}
