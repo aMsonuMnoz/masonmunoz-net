@@ -39,6 +39,26 @@ h1{
 	line-height: 1;
 }
 
+h2{
+	margin-bottom: 0;
+	padding-bottom:0;
+}
+
+p{
+	text-indent: 2em;
+	margin: .2rem;
+}
+
+a, a:focus{
+	/* color: #551A8B; */
+	border: inherit;
+	outline: none;
+}
+
+.navbar a:visited{
+	color: #551A8B;
+}
+
 .header-wrapper{
 	width: 100%;
 	background: grey;
@@ -54,6 +74,15 @@ h1{
 	padding-top: 4.5rem;
 }
 
+.current{
+	color: chartreuse !important;
+}
+
+#construction{
+	width: 100%;
+	max-width: 574px;
+	height: auto;
+}
 
 /* ----------------------- Marquee ------------------------ */
 .marquee {
